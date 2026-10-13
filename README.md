@@ -49,5 +49,22 @@
 | `ecommerce_analysis_rfm_segments.sql` | RFM 分层表结构 |
 | `ecommerce_analysis.pbix` | Power BI 仪表板 |
 
+## 🚀 使用方法
+
+### 1. 建库建表
+```bash
+mysql -u root -p < ecommerce_analysis_create_tables.sql
+```
+
+### 2. 生成数据 + ETL 清洗
+```bash
+python ecommerce_analysis.py
+python etl.py
+python sales_fact.py
+```
+
+### 3. 打开 Power BI
+用 Power BI Desktop 打开 `ecommerce_analysis.pbix`
+
 
 
